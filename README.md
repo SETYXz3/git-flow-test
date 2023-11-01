@@ -31,7 +31,6 @@ $ git flow feature publish cicd
 ```
 
 ### 開発作業開始
-step 1. プール
 ```bash
 $ git flow feature pull origin cicd
 ```
@@ -52,5 +51,8 @@ $ git push origin feature/cicd
 
 pullrequest間違ったため、一回戻す(revert)を実施
 
+ここから開発再開
+
+pullするのが忘れた。
 
 end.
