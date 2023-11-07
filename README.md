@@ -1,5 +1,24 @@
-# git-flow-test
+## 参考
+### ローカルJenkins起動方法(MacOS)
 
+```bash
+# 起動
+$ brew services start jenkins-lts
+
+# 再起動
+$ brew services restart jenkins-lts
+
+# 停止
+$ brew services stop jenkins-lts
+
+# 画面から停止や再起動もできる
+http://localhost:8080/exit
+
+http://localhost:8080/restart
+
+```
+
+# git-flow-test
 
 ### git flowの初期化
 
