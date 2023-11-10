@@ -1,7 +1,7 @@
 pipeline {
     agent any
     // 上記の「Global Tool Configuration」で設定したnameを指定
-    tools { nodejs "node" }
+    tools { nodejs "nodejs" }
     stages {
         stage('Install') {
             steps {
