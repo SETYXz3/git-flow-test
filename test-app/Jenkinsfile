@@ -3,6 +3,11 @@ pipeline {
     // 上記の「Global Tool Configuration」で設定したnameを指定
     tools { nodejs "nodejs" }
     stages {
+        stage("Clean Up"){
+            steps {
+                deleteDir()
+            }
+        }
         // stage('Install') {
         //     steps {
         //         dir ("${env.WORKSPACE}/") {
@@ -13,7 +18,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                dir ("${env.WORKSPACE}/") {
+                dir ("test-app") {
                   sh 'npm run build'
                 }
             }
