@@ -68,4 +68,6 @@ $ git commit -am "first commit."
 $ git push origin feature/cicd
 ```
 
+jenkinsテスト用
+
 --- end ---
