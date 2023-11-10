@@ -1,30 +1,29 @@
 pipeline {
     agent any
     stages {
-        stage("Stage 1"){
+        stage("Clean Up"){
             steps {
-                echo "This is stage 1"
+                deleteDir()
             }
         }
-        stage("Stage 2"){
+        stage("Clone Repo"){
             steps {
-                echo "This is stage 2"
+                sh "git clone https://github.com/SETYXz3/git-flow-test.git"
             }
         }
-        stage("Stage 3"){
+        stage("Build"){
             steps {
-                echo "This is stage 3"
+                dir("test-app") {
+                    sh "npm run build"
+                }
             }
         }
-        stage("Stage 4"){
-            steps {
-                echo "This is stage 4"
-            }
-        }
-        stage("Stage 5"){
-            steps {
-                echo "This is stage 5"
-            }
-        }
+        // stage("Test"){
+        //     steps {
+        //         dir("simple-java-maven-app") {
+        //             sh "mvn test"
+        //         }
+        //     }
+        // }
     }
 }
