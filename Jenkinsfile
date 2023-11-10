@@ -8,11 +8,11 @@ pipeline {
         //         deleteDir()
         //     }
         // }
-        stage("Clone Repo"){
-            steps {
-                sh "git clone -b feature/cicd https://github.com/SETYXz3/git-flow-test.git"
-            }
-        }
+        // stage("Clone Repo"){
+        //     steps {
+        //         sh "git clone -b feature/cicd https://github.com/SETYXz3/git-flow-test.git"
+        //     }
+        // }
         // stage('Install') {
         //     steps {
         //         dir ("git-flow-test/test-app") {
@@ -22,7 +22,7 @@ pipeline {
         // }
         stage('Build') {
             steps {
-                dir ("git-flow-test/test-app") {
+                dir ("test-app") {
                   sh 'npm run build'
                 }
             }
