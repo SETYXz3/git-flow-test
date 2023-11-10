@@ -8,17 +8,16 @@ pipeline {
                 deleteDir()
             }
         }
-        // stage('Install') {
-        //     steps {
-        //         dir ("${env.WORKSPACE}/") {
-        //           sh 'npm install'
-        //         }
-        //     }
-        // }
-        
+        stage('Install') {
+            steps {
+                dir ("git-flow-test/test-app") {
+                  sh 'npm install'
+                }
+            }
+        }
         stage('Build') {
             steps {
-                dir ("test-app") {
+                dir ("git-flow-test/test-app") {
                   sh 'npm run build'
                 }
             }
