@@ -15,7 +15,7 @@ pipeline {
         // }
         stage('Install') {
             steps {
-                dir ("git-flow-test/test-app") {
+                dir ("test-app") {
                   sh 'npm install'
                 }
             }
